@@ -1,0 +1,21 @@
+print(f"{' EXERCÍCIO 04 ':=^30}\n")
+# Descrição: Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele.
+
+algo = input('Digite algo: ')
+
+print("\nTipo primitivo: ", type(algo))
+print("Alfanumérico (contém letras e números):", algo.isalnum())
+print("Alfabético (somente letras):", algo.isalpha())
+print("ASCII (caracteres válidos em ASCII):", algo.isascii())
+print("Decimal (caracteres numéricos decimais):", algo.isdecimal())
+print("Dígitos (somente números):", algo.isdigit())
+print("Identificador válido (usável como nome de variável):", algo.isidentifier())
+print("Numérico (números, incluindo símbolos como frações):", algo.isnumeric())
+print("Imprimível (caracteres visíveis e espaço):", algo.isprintable())
+print("Apenas espaços:", algo.isspace())
+print("Formato de título (Primeira letra maíuscula):", algo.istitle())
+print("Minúsculas (todas as letras em minúsculo):", algo.islower())
+print("Maiúsculas (todas as letras em maíusculo):", algo.isupper())
+print("String começa com 'Exemplo':", algo.startswith("Exemplo"))
+print("String termina com '123':", algo.endswith("123"))
+print("String está vazia:", algo == "")
