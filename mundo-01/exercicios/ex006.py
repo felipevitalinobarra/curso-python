@@ -3,4 +3,4 @@ print(f"{' EXERCÍCIO 06 ':=^30}\n")
 
 num = int(input('Digite um número: '))
 
-print (f'\nO dobro de {num} é "{num*2}", o triplo é "{num*3}" e a raíz quadrada é "{num ** 0.5:.2f}"')
+print (f'\nO dobro de {num} é "{num*2}".\nO triplo é "{num*3}".\nE a raíz quadrada é "{num ** 0.5:.2f}".')

@@ -4,4 +4,4 @@ print(f"{' EXERCÍCIO 10 ':=^30}\n")
 # Cotação da época: U$5.97
 
 real = (float(input('Quanto dinheiro você possui ? R$')))
-print(f'\nR${real:.2f} vale U${real/5.97:.2f}')
+print(f'Com R${real:.2f} você compra:\nU${real/5.97:.2f}\n€{real/6.34:.2f}\n{real/581295.06:.8f} BTC')
