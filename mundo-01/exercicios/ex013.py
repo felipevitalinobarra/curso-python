@@ -1,4 +1,4 @@
-print(f"{' EXERCÍCIO 12 ':=^30}\n")
+print(f"{' EXERCÍCIO 13 ':=^30}\n")
 # Faça um algoritmo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.
 
 salario = float(input('Qual o salário do funcionário: R$'))
