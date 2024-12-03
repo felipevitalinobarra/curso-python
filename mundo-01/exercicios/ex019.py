@@ -6,7 +6,7 @@ from random import choice
 nomes = []
 
 for i in range(1,5):
-    nome = input(f'Informe o nome do(a) {i}° aluno(a): ')
+    nome = input(f'Informe o nome do {i}° aluno: ')
     nomes.append(nome)
 
-print(f'\nEscolhido(a) para apagar o quadro: {choice(nomes)}')
+print(f'\nO aluno escolhido foi: {choice(nomes)}')

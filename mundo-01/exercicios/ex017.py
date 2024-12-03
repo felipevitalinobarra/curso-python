@@ -3,8 +3,7 @@ print(f"{' EXERCÍCIO 17 ':=^30}\n")
 
 from math import hypot
 
-catOpo = float(input('Informe o comprimento do cateto oposto: '))
-catAdj = float(input('Informe o comprimento do cateto adjacente: '))
-
-hipotenusa = hypot(catOpo, catAdj)
-print(f'Hipotenusa: {hipotenusa:.2f}')
+co = float(input('Comprimento do cateto oposto: '))
+ca = float(input('Comprimento do cateto adjacente: '))
+hipotenusa = hypot(co, ca)
+print(f'A hipotenusa vai medir {hipotenusa:.2f}')
