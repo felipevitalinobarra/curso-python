@@ -12,6 +12,6 @@ ultimoNome = nome.split()[-1]
 
 print(
     f'\nMuito prazer em teconher!'
-    f'\nSeu primeiro nome é {primeiroNome}',
+    f'\nSeu primeiro nome é {primeiroNome}'
     f'\nSeu último nome é {ultimoNome}'
 )

@@ -9,7 +9,7 @@ Crie um programa que leia o nome completo de uma pessoa e mostre:
 
 nome = str(input('Digite o seu nome completo: ')).strip()
 print(
-    f'\nAnalisando seu nome...',
+    f'\nAnalisando seu nome...'
     f'\nSeu nome em maiúsculo é {nome.upper()}.'
     f'\nSeu nome em minúsculo é {nome.lower()}.'
     f'\nSeu nome ao todo tem {len(nome.replace(' ',''))} letras.'
