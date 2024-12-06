@@ -1,6 +1,18 @@
-print(f"{' EXERCÍCIO 06 ':=^30}\n")
+formatação = {
+    'underline': '\033[4m',
+    'roxo': '\033[1;35m',
+    'fundoroxo': '\033[1;45m',
+    'reset': '\033[m'
+}
+
+print(f"{formatação['fundoroxo']}{' EXERCÍCIO 06 ':=^30}{formatação['reset']}\n")
 # Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raíz quadrada.
 
-num = int(input('Digite um número: '))
+num = int(input(f'Digite um número: {formatação["underline"]}'))
 
-print (f'\nO dobro de {num} é "{num*2}".\nO triplo é "{num*3}".\nE a raíz quadrada é "{num ** 0.5:.2f}".')
+print(
+        f'{formatação["reset"]}\n'
+        f'O {formatação["underline"]}dobro{formatação["reset"]} de {formatação["roxo"]}{num}{formatação["reset"]} é {formatação["fundoroxo"]}"{num*2}"{formatação["reset"]}.'
+        f'\nO {formatação["underline"]}triplo{formatação["reset"]} é {formatação["fundoroxo"]}"{num*3}"{formatação["reset"]}.'
+        f'\nE a {formatação["underline"]}raíz quadrada{formatação["reset"]} é {formatação["fundoroxo"]}"{num ** 0.5:.2f}"{formatação["reset"]}.'
+     )
