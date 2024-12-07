@@ -1,12 +1,30 @@
-print(f"{' EXERCÍCIO 18 ':=^30}\n")
-# Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.
-
 from math import radians, sin, cos, tan
 
-angulo = radians(float(input('Informe o ângulo: ')))
+formatação = {
+    'enunciado': '\033[41m',
+    'vermelho': '\033[1;31m',
+    'underline': '\033[4m',
+    'reset': '\033[m'
+}
 
-seno = sin(angulo)
-cossenno = cos(angulo)
-tangente = tan(angulo)
+print(f"{formatação['enunciado']}{' EXERCÍCIO 18 ':=^30}{formatação['reset']}\n")
+# Programa para calcular seno, cosseno e tangente de um ângulo
 
-print(f'SENO: {seno:.2f}\nCOSSENO: {cossenno:.2f}\nTANGENTE: {tangente:.2f}')
+try:
+    angulo = float(input(f'Informe o ângulo: {formatação["vermelho"]}'))
+    
+    # Converte o ângulo para radianos
+    angulo_rad = radians(angulo)
+    
+    seno = sin(angulo_rad)
+    cosseno = cos(angulo_rad)
+    tangente = tan(angulo_rad)
+
+    print(
+        f'\n{formatação["reset"]}'
+        f'{formatação["underline"]}SENO{formatação["reset"]}: {formatação["vermelho"]}{seno:.2f}{formatação["reset"]}\n'
+        f'{formatação["underline"]}COSSENO{formatação["reset"]}: {formatação["vermelho"]}{cosseno:.2f}{formatação["reset"]}\n'
+        f'{formatação["underline"]}TANGENTE{formatação["reset"]}: {formatação["vermelho"]}{tangente:.2f}{formatação["reset"]}'
+    )
+except ValueError:
+    print(f'{formatação["reset"]}{formatação["vermelho"]}Erro: Por favor, insira um valor numérico válido para o ângulo.{formatação["reset"]}')

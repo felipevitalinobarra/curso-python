@@ -5,11 +5,17 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 09 ':=^30}{formatação['reset']}\n")
-# Faça um programa que leia um número inteiro qualquer e mostre na tela a sua tabuada.
+# Exibição da tabuada de um número.
 
-num = int(input(f'Digite um número para ver sua tabuada: {formatação["azul"]}'))
-
-print('-' * 15)
-for i in range(1,11):
-   print(f'{num} x {i:2} = {num*i}')
-print('-' * 15)
+try:
+    num = int(input(f'Digite um número para ver sua tabuada: {formatação["azul"]}'))
+    
+    if num < 0:
+        print(f'{formatação["reset"]}{formatação["azul"]}Erro: O número não pode ser negativo!{formatação["reset"]}')
+    else:
+        print('-' * 20)
+        for i in range(1, 11):
+            print(f'{formatação["azul"]}{num} x {i:2} = {num*i}')
+        print('-' * 20, f'{formatação["reset"]}')
+except ValueError:
+    print(f'{formatação["reset"]}{formatação["azul"]}Erro: Por favor, insira um número inteiro válido!{formatação["reset"]}')
