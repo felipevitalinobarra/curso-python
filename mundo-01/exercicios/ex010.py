@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Cálculo de quanto o usuário pode comprar em dólares, euros e BTC.
+
 formatação = {
     'enunciado':'\033[42m',
     'verde': '\033[1;32m',
@@ -5,7 +7,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 10 ':=^30}{formatação['reset']}\n")
-# Cálculo de quanto o usuário pode comprar em dólares, euros e BTC.
 
 try:
     real = float(input(f'Quanto dinheiro você possui? {formatação["verde"]}R$'))

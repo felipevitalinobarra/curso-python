@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada.
+
 formatação = {
     'underline': '\033[4m',
     'roxo': '\033[1;35m',
@@ -6,7 +8,6 @@ formatação = {
 }
 
 print(f"{formatação['fundoroxo']}{' EXERCÍCIO 06 ':=^30}{formatação['reset']}\n")
-# Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada.
 
 try:
     num = int(input(f'Digite um número: {formatação["underline"]}'))

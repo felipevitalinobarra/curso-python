@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Conversão de temperatura de °C para °F com categorização.
+
 formatação = {
     'enunciado':'\033[45m',
     'ciano':'\033[1;36m',
@@ -8,7 +10,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 14 ':=^30}{formatação['reset']}\n")
-# Conversão de temperatura de °C para °F com categorização.
 
 try:
     celsius = float(input(f'Informe a temperatura em °C: {formatação["roxo"]}'))

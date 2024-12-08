@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Conversão de unidades de medida de distância.
+
 formatação = {
     'enunciado':'\033[44m',
     'azul': '\033[1;34m',
@@ -6,7 +8,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 08 ':=^30}{formatação['reset']}\n")
-# Conversão de unidades de medida de distância.
 
 try:
     m = float(input(f'Digite uma distância em metros: {formatação["underazul"]}'))

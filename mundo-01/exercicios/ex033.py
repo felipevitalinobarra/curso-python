@@ -1,22 +1,36 @@
-print(f"{' EXERCÍCIO 33 ':=^30}\n")
-# Faça um programa que leia três números e mostre qual é o maior e qual é o menor.
+# Enunciado do Exercício: Faça um programa que leia três números e mostre qual é o maior e qual é o menor.
 
-n1 = int(input('Primeiro número: '))
-n2 = int(input('Segundo  número: '))
-n3 = int(input('Terceiro número: '))
+from time import sleep
 
-menor = n1
+formatação = {
+    'enunciado': '\033[44m',
+    'amarelo': '\033[1;33m',
+    'verde': '\033[1;32m',
+    'vermelho': '\033[1;31m',
+    'reset': '\033[m'
+}
 
-if n2 < n1 and n2 < n3:
-    menor = n2
-if n3 < n1 and n3 < n2:
-    menor = n3    
-print(f'\nO MENOR valor digitado foi {menor}.')
+print(f'{formatação["enunciado"]}{" EXERCÍCIO 33 ":=^30}{formatação["reset"]}\n')
 
-maior = n1
+# Validação da entrada
+while True:
+    try:
+        n1 = int(input(f'Primeiro número: '))
+        n2 = int(input(f'Segundo número: '))
+        n3 = int(input(f'Terceiro número: '))
+        break
+    except ValueError:
+        print(f'{formatação["vermelho"]}Entrada inválida! Digite números inteiros válidos.{formatação["reset"]}\n')
 
-if n2 > n1 and n2 > n3:
-    maior = n2
-if n3 > n1 and n3 > n2:
-    maior = n3
-print(f'\nO MAIOR valor digitado foi {maior}.')        
+# Determina o menor e maior número
+menor = min(n1, n2, n3)
+maior = max(n1, n2, n3)
+
+# Exibe os resultados
+print(f'\n{formatação["reset"]}Analisando os números...')
+sleep(1)
+
+print(
+    f'\nO {formatação["verde"]}MENOR{formatação["reset"]} valor digitado foi {formatação["amarelo"]}{menor}{formatação["reset"]}.'
+    f'\nO {formatação["verde"]}MAIOR{formatação["reset"]} valor digitado foi {formatação["amarelo"]}{maior}{formatação["reset"]}.'
+)

@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Exibição da tabuada de um número.
+
 formatação = {
     'enunciado':'\033[44m',
     'azul': '\033[1;34m',
@@ -5,7 +7,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 09 ':=^30}{formatação['reset']}\n")
-# Exibição da tabuada de um número.
 
 try:
     num = int(input(f'Digite um número para ver sua tabuada: {formatação["azul"]}'))

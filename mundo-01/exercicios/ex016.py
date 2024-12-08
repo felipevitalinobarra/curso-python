@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Criação de programa que mostra a porção inteira de um número Real
+
 from math import trunc
 
 formatação = {
@@ -7,7 +9,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 16 ':=^30}{formatação['reset']}\n")
-# Criação de programa que mostra a porção inteira de um número Real
 
 try:
     num = float(input(f'Digite um número: {formatação["amarelo"]}'))

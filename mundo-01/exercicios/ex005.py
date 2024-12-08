@@ -1,13 +1,14 @@
+# Enunciado do Exercício: Faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor.
+
 formatação = {
-    'enunciado': '\033[37;43m',  # Fundo amarelo, texto branco
-    'underline': '\033[4m',      # Texto sublinhado
-    'verde': '\033[1;32m',       # Texto verde
-    'vermelho': '\033[1;31m',    # Texto vermelho
-    'reset': '\033[m'            # Reseta formatação
+    'enunciado': '\033[37;43m',
+    'underline': '\033[4m',
+    'verde': '\033[1;32m',
+    'vermelho': '\033[1;31m',
+    'reset': '\033[m'
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 05 ':=^30}{formatação['reset']}\n")
-# Faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor.
 
 try:
     num = int(input(f'Digite um número: {formatação["underline"]}'))

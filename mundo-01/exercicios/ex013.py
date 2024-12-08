@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Cálculo do novo salário com 15% de aumento.
+
 formatação = {
     'enunciado':'\033[42m',
     'verde': '\033[1;32m',
@@ -5,7 +7,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 13 ':=^30}{formatação['reset']}\n")
-# Cálculo do novo salário com 15% de aumento.
 
 try:
     salario = float(input(f'Qual o salário do funcionário? {formatação["verde"]}R$'))

@@ -1,12 +1,13 @@
+# Enunciado do Exercício: Crie um programa que leia dois números e mostre a soma entre eles.
+
 formatação = {
-    "enunciado": "\033[1;37;45m",   # Texto branco, fundo roxo
-    "roxo": "\033[1;35m",           # Texto roxo em negrito
-    "underline": "\033[4m",         # Texto sublinhado
-    "reset": "\033[m"               # Reseta para o padrão
+    "enunciado": "\033[1;37;45m",
+    "roxo": "\033[1;35m",
+    "underline": "\033[4m",
+    "reset": "\033[m"
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 03 ':=^30}{formatação['reset']}\n")
-# Descrição: Crie um programa que leia dois números e mostre a soma entre eles.
 
 try:
     n1 = int(input(f'Primeiro número: {formatação["roxo"]}'))

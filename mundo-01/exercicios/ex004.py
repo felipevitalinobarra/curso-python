@@ -1,14 +1,15 @@
+# Enunciado do Exercício: Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele.
+
 formatação = {
-    'enunciado': '\033[1;37;43m',  # Texto branco, fundo amarelo
-    "verde": "\033[1;30;42m",      # Texto preto, fundo verde
-    "vermelho": "\033[1;30;41m",   # Texto preto, fundo vermelho
-    "ciano": "\033[7;30;46m",      # Texto preto, fundo ciano
-    "underline": "\033[4m",        # Texto sublinhado
-    "reset": "\033[m"              # Reseta para padrão
+    'enunciado': '\033[1;37;43m',
+    "verde": "\033[1;30;42m",
+    "vermelho": "\033[1;30;41m",
+    "ciano": "\033[7;30;46m",
+    "underline": "\033[4m",
+    "reset": "\033[m"
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 04 ':=^30}{formatação['reset']}\n")
-# Descrição: Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele.
 
 algo = input(f'Digite algo: {formatação['underline']}')
 print(f'{formatação['reset']}\n')

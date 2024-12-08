@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Cálculo da área da parede e tinta necessária para pintá-la.
+
 formatação = {
     'enunciado':'\033[43m',
     'cinza': '\033[4;37m',
@@ -6,7 +8,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 11 ':=^30}{formatação['reset']}\n")
-# Cálculo da área da parede e tinta necessária para pintá-la.
 
 try:
     largura = float(input(f'Digite a largura da parede (em metros): {formatação["cinza"]}'))

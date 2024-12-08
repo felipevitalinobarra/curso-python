@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Cálculo da hipotenusa com base nos catetos
+
 from math import hypot
 
 formatação = {
@@ -8,7 +10,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 17 ':=^30}{formatação['reset']}\n")
-# Cálculo da hipotenusa com base nos catetos
 
 try:
     co = float(input(f'Comprimento do {formatação["underline"]}cateto oposto{formatação["reset"]}: {formatação["ciano"]}'))

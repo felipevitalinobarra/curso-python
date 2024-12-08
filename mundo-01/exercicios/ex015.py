@@ -1,13 +1,17 @@
+"""
+Enunciado do Exercício: 
+    Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. 
+    Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e 0,15 por Km rodado.
+"""
+
 formatação = {
-    'enunciado': '\033[40m',  # Fundo preto
-    'branco': '\033[1;37m',    # Texto branco
-    'verde': '\033[1;32m',     # Texto verde
-    'reset': '\033[m'          # Reseta a formatação
+    'enunciado': '\033[40m',
+    'branco': '\033[1;37m',
+    'verde': '\033[1;32m',
+    'reset': '\033[m'
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 15 ':=^30}{formatação['reset']}\n")
-# Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. 
-# Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e 0,15 por Km rodado.
 
 try:
     dias = int(input(f'Quantos dias alugados? {formatação["branco"]}'))

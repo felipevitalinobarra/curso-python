@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Cálculo do preço com 5% de desconto.
+
 formatação = {
     'enunciado':'\033[42m',
     'verde': '\033[1;32m',
@@ -5,7 +7,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 12 ':=^30}{formatação['reset']}\n")
-# Cálculo do preço com 5% de desconto.
 
 try:
     preco = float(input(f'Digite o preço do produto: {formatação["verde"]}R$'))

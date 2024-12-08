@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Programa para calcular seno, cosseno e tangente de um ângulo
+
 from math import radians, sin, cos, tan
 
 formatação = {
@@ -8,7 +10,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 18 ':=^30}{formatação['reset']}\n")
-# Programa para calcular seno, cosseno e tangente de um ângulo
 
 try:
     angulo = float(input(f'Informe o ângulo: {formatação["vermelho"]}'))

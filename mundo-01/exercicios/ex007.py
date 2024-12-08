@@ -1,3 +1,5 @@
+# Enunciado do Exercício: Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média.
+
 formatação = {
     'enunciado': '\033[37;43m',
     'underline': '\033[4m',
@@ -9,7 +11,6 @@ formatação = {
 }
 
 print(f"{formatação['enunciado']}{' EXERCÍCIO 07 ':=^30}{formatação['reset']}\n")
-# Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média.
 
 try:
     nota1 = float(input(f'Digite a primeira nota: {formatação["underline"]}').strip())
