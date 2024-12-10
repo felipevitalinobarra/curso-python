@@ -1,4 +1,11 @@
-# Enunciado do Exercício: Desenvolva um programa que leia o comprimento de três retas e diga ao usuário se elas podem ou não formar um triângulo.
+"""
+Enunciado do Exercício:
+    Refaça o DESAFIO 035 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado:
+
+    > Equilátero: todos os lados iguais
+    > Isócelese: dois lados iguais
+    > Escaleno: todos os lados diferentes
+"""
 
 formatação = {
     'enunciado': '\033[44m',
@@ -30,6 +37,17 @@ while True:
 
 # Verificação se os segmentos formam um triângulo
 if (a + b > c) and (a + c > b) and (b + c > a):
-    print(f'\n{formatação["verde"]}Os segmentos acima FORMAM UM TRIÂNGULO!{formatação["reset"]}')
+    tipo = []
+    if a == b and a == c:
+        tipo = 'Equilátero'
+        print(f'\nOs segmentos acima {formatação["verde"]}FORMAM UM TRIÂNGULO{formatação["reset"]} do tipo {formatação["verde"]}{tipo}{formatação["reset"]}.')
+        
+    elif a == b or b == c or c == a:
+        tipo = 'Isósceles'
+        print(f'\nOs segmentos acima {formatação["verde"]}FORMAM UM TRIÂNGULO{formatação["reset"]} do tipo {formatação["verde"]}{tipo}{formatação["reset"]}.')
+    else:
+        tipo = 'Escaleno'
+        print(f'\nOs segmentos acima {formatação["verde"]}FORMAM UM TRIÂNGULO{formatação["reset"]} do tipo {formatação["verde"]}{tipo}{formatação["reset"]}.')
 else:
     print(f'\n{formatação["vermelho"]}Os segmentos acima NÃO FORMAM UM TRIÂNGULO!{formatação["reset"]}')
+    

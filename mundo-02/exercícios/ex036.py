@@ -49,3 +49,4 @@ else:
         f'\n{formatação["verde"]}Empréstimo aprovado!{formatação["reset"]}'
         f'\nSua prestação mensal será de {formatação["verde"]}R${prestação_mensal:.2f}{formatação["reset"]}.'
         )
+    
