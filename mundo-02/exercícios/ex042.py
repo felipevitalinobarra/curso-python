@@ -38,7 +38,7 @@ while True:
 # Verificação se os segmentos formam um triângulo
 if (a + b > c) and (a + c > b) and (b + c > a):
     tipo = []
-    if a == b and a == c:
+    if a == b == c:
         tipo = 'Equilátero'
         print(f'\nOs segmentos acima {formatação["verde"]}FORMAM UM TRIÂNGULO{formatação["reset"]} do tipo {formatação["verde"]}{tipo}{formatação["reset"]}.')
         

@@ -17,36 +17,35 @@ print(f'{formatação["enunciado"]}{" EXERCÍCIO 36 ":=^30}{formatação["reset"
 
 while True:
     try:
-        valor_da_casa = float(input('Qual o valor da casa: R$'))
-        if valor_da_casa < 50000:
+        casa = float(input('Qual o valor da casa: R$'))
+        if casa < 50000:
             print(f'\n{formatação["vermelho"]}O valor da casa deve ser maior ou igual a R$50.000,00.{formatação["reset"]}\n')
             continue
         
-        salário_do_comprador = float(input('Qual o salário do comprador ? R$'))
-        if salário_do_comprador < 1412.00:
+        salário = float(input('Qual o salário do comprador ? R$'))
+        if salário < 1412.00:
             print(f'\n{formatação["vermelho"]}O salário do comprador deve ser maior ou igual ao salário mínimo atual de R$1.412,00\n{formatação["reset"]}')
             continue
         
-        anos_pagamento = int(input('Quantos anos para pagar ? '))
-        if anos_pagamento <= 0:
+        anos = int(input('Quantos anos para pagar ? '))
+        if anos <= 0:
             print(f'\n{formatação["vermelho"]}O número de anos deve ser maior que zero.{formatação["reset"]}\n')
             continue
         break
     except ValueError:
         print(f'{formatação["vermelho"]}Entrada inválida! Por favor digite valores númericos válidos.{formatação["reset"]}')
 
-parcelamento = anos_pagamento * 12
-prestação_mensal = valor_da_casa / parcelamento
-salário30 = salário_do_comprador * 0.30
+prestação = casa / (anos * 12)
+mínimo = salário * 0.30
 
-if prestação_mensal > salário30:
+if prestação > mínimo:
     print(
             f'\n{formatação["vermelho"]}Empréstimo negado!{formatação["reset"]}'
-            f'\nA prestação mensal de R${prestação_mensal:.2f} excede 30% do seu salário ({formatação["vermelho"]}R${salário30:.2f}{formatação["reset"]}).'
+            f'\nA prestação mensal de R${prestação:.2f} excede 30% do seu salário ({formatação["vermelho"]}R${mínimo:.2f}{formatação["reset"]}).'
          )        
 else:
     print(
         f'\n{formatação["verde"]}Empréstimo aprovado!{formatação["reset"]}'
-        f'\nSua prestação mensal será de {formatação["verde"]}R${prestação_mensal:.2f}{formatação["reset"]}.'
+        f'\nSua prestação mensal será de {formatação["verde"]}R${prestação:.2f}{formatação["reset"]}.'
         )
     

@@ -24,12 +24,12 @@ def jogar_jokenpo():
         return jogar_jokenpo()  # Reinicia o jogo em caso de empate
     else:
         resultados = {
-            ('pedra', 'tesoura'): 'Você ganhou!',
-            ('tesoura', 'papel'): 'Você ganhou!',
-            ('papel', 'pedra'): 'Você ganhou!',
-            ('tesoura', 'pedra'): 'Computador ganhou!',
-            ('papel', 'tesoura'): 'Computador ganhou!',
-            ('pedra', 'papel'): 'Computador ganhou!'
+            ('pedra', 'tesoura'): 'Você ganhou! (pedra quebra tesoura)',
+            ('tesoura', 'papel'): 'Você ganhou! (tesoura corta papel)',
+            ('papel', 'pedra'): 'Você ganhou! (papel cobre pedra)',
+            ('tesoura', 'pedra'): 'Computador ganhou! (pedra quebra tesoura)',
+            ('papel', 'tesoura'): 'Computador ganhou! (tesoura corta papel)',
+            ('pedra', 'papel'): 'Computador ganhou! (papel cobre pedra)'
         }
 
         resultado = resultados.get((jogador, computador))

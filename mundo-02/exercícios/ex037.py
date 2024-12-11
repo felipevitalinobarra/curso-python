@@ -3,9 +3,9 @@ Enunciado do Exercício:
     
     Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão:
     
-    - 1 para binário
-    - 2 para octal
-    - 3 para hexadecimal
+    > 1 para binário
+    > 2 para octal
+    > 3 para hexadecimal
 """
 
 formatação = {
@@ -25,12 +25,12 @@ while True:
         
         # Escolha da base de conversão
         print(
-            f'{formatação["reset"]}\nEscolha uma opção:{formatação["azul"]}\n'
-            f'1) para Binário\n'
-            f'2) para Octal\n'
-            f'3) para Hexadecimal{formatação["reset"]}'
+            f'{formatação["reset"]}\nEscolha a base para conversão:{formatação["azul"]}\n'
+            f'[ 1 ] converter para Binário\n'
+            f'[ 2 ] converter para Octal\n'
+            f'[ 3 ] converter para Hexadecimal{formatação["reset"]}'
         )
-        escolha = int(input(f'\nEscolha a base de conversão: {formatação["azul"]}'))
+        escolha = int(input(f'\nSua opção: {formatação["azul"]}'))
         
         # Validação da escolha
         if escolha not in [1, 2, 3]:

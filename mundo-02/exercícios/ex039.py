@@ -2,9 +2,9 @@
 Enunciado do Exercício:
     Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com sua idade:
 
-    - Se ele ainda vai se alistar ao serviço miltar. (menos de 18 anos)
-    - Se é a hora de se alistar. (18 anos)
-    - Se já passou do tempo do alistamento. (acima de 18 anos)
+    > Se ele ainda vai se alistar ao serviço miltar. (menos de 18 anos)
+    > Se é a hora de se alistar. (18 anos)
+    > Se já passou do tempo do alistamento. (acima de 18 anos)
 
     Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.
 """
@@ -37,7 +37,7 @@ while True:
                 anos_restantes = 18 - idade 
                 print(
                         f'Você tem {formatação["verde"]}{idade} anos{formatação["reset"]}.\n'
-                        f'Faltam {formatação["verde"]}{anos_restantes} anos{formatação["reset"]} para o seu alistamento.'
+                        f'Seu alistamento será em {ano_atual + anos_restantes}\nFaltam {formatação["verde"]}{anos_restantes} anos{formatação["reset"]} para o seu alistamento.'
                 )
             elif idade == 18:
                 print(

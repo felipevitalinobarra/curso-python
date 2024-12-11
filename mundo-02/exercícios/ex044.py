@@ -15,35 +15,35 @@ while True:
     except ValueError:
         print('Valor inválido! Por favor, insira um número válido.\n')
 
+print(
+    '\nEscolha a forma de pagamento:\n'
+    '[ 1 ] À vista no dinheiro ou cheque (10% de desconto)\n'
+    '[ 2 ] À vista no cartão (5% de desconto)\n'
+    '[ 3 ] Em até 2x no cartão (sem juros)\n'
+    '[ 4 ] 3x ou mais no cartão (20% de juros)'
+)
+
 while True:
     try:
-        forma_de_pagamento = int(input(
-            '\nQual a forma de pagamento:\n'
-            'Digite 1 para: À vista no dinheiro ou cheque.\n'
-            'Digite 2 para: À vista no cartão.\n'
-            'Digite 3 para: Em até 2x no cartão.\n'
-            'Digite 4 para: Em até 3x ou mais no cartão.\n\nEscolha: '
-        ))
-        
+        forma_de_pagamento = int(input('\nQual é a opção: '))
+
         if forma_de_pagamento == 1:
-            desconto = valor_produto - (valor_produto * 0.10)
-            print(f'\nPagando à vista no dinheiro ou cheque, o produto que custava R${valor_produto:.2f}, '
-                  f'custará R${desconto:.2f} com 10% de desconto.')
-            break
+            total = valor_produto * 0.90
+            print(f'\nPagando à vista no dinheiro ou cheque, o total com 10% de desconto será R${total:.2f}.')
         elif forma_de_pagamento == 2:
-            desconto = valor_produto - (valor_produto * 0.05)
-            print(f'\nPagando à vista no cartão, o produto que custava R${valor_produto:.2f}, '
-                  f'custará R${desconto:.2f} com 5% de desconto.')
-            break
+            total = valor_produto * 0.95
+            print(f'\nPagando à vista no cartão, o total com 5% de desconto será R${total:.2f}.')
         elif forma_de_pagamento == 3:
-            print(f'\nPagando em até 2x no cartão, o produto custará o preço normal que é R${valor_produto:.2f}.')
-            break
+            parcela = valor_produto / 2
+            print(f'\nPagando em até 2x no cartão, o valor será 2 parcelas de R${parcela:.2f}, totalizando R${valor_produto:.2f}.')
         elif forma_de_pagamento == 4:
-            juros = valor_produto + (valor_produto * 0.20)
-            print(f'\nPagando em até 3x ou mais no cartão, o produto que custava R${valor_produto:.2f}, '
-                  f'custará R${juros:.2f}.')
-            break
+            parcelas = int(input('Quantas parcelas? '))
+            total = valor_produto * 1.20
+            parcela = total / parcelas
+            print(f'\nParcelando em {parcelas}x, o valor total com 20% de juros será R${total:.2f}, com parcelas de R${parcela:.2f}.')
         else:
-            print('Escolha inválida! Por favor, digite um número de 1 a 4.\n')
+            print('Opção inválida! Por favor, escolha uma opção entre 1 e 4.\n')
+            continue
+        break
     except ValueError:
-        print('Entrada inválida! Por favor, insira um número inteiro de 1 a 4.\n')
+        print('Entrada inválida! Por favor, insira um número inteiro.\n')
