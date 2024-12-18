@@ -3,8 +3,8 @@ Enunciado do Exercício:
     Faça um programa que leia o peso de cinco pessoas. No final, mostre qual foi o maior peso e o menor peso lidos.
 """
 
-maior = 0
-menor = None
+maior = float('-inf')
+menor = float('inf')
 
 for i in range (1,6):
     while True:
@@ -16,7 +16,7 @@ for i in range (1,6):
             break
         except ValueError:
             print('Entrada inválida! Por favor, digite o peso novamente.')
-    if menor is None or peso < menor:
+    if peso < menor:
         menor = peso
     if peso > maior:
         maior = peso        
