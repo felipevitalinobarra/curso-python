@@ -10,7 +10,7 @@ Enunciado do Exercício:
 maioridade = homens = mulheres20 = 0
 
 print('=*=' * 10)
-print('  C A D A S T R A M E N T O ')
+print(f'{"C A D A S T R A M E N T O":^30}')
 print('=*=' * 10)
 
 while True:
@@ -29,7 +29,7 @@ while True:
         if sexo == 'F' and idade < 20:
             mulheres20 +=1
         
-        opção = input('Deseja continuar [S/N]: ').strip().upper()
+        opção = input('\nDeseja continuar [S/N]: ').strip().upper()
         if opção not in 'SN':
             print('Entrada inválida! Digite "S" para continuar ou "N" para encerrar.')
             continue

@@ -5,9 +5,9 @@ Enunciado do Exercício:
 
     Obs.: Considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1.
 """
-print('=' * 30)
-print('   B A N C O  E L  B A R R A')
-print('=' * 30)
+print('=' * 40)
+print(f'{" B A N C O  E L  B A R R A ":=^40}')
+print('=' * 40)
 
 try:
     saque = int(input('Que valor você quer sacar? R$'))
@@ -36,8 +36,8 @@ try:
             saque = saque - cédulas * 1
             print(f'Total de {cédulas} {"cédula" if cédulas == 1 else "cédulas"} de R$1')  
 
-    print('='*30)
+    print('='*40)
     print('Volte sempre ao BANCO EL BARRA! Tenha um excelente dia!')
 except ValueError:
-    print('='*30)
+    print('='*40)
     print('Entrada inválida! Por favor, digite um valor inteiro.')

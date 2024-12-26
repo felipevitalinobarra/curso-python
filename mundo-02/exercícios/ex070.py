@@ -11,9 +11,9 @@ total = mais_de_mil = 0
 mais_barato = float('inf')
 produto_mais_barato = ''
 
-print('=*=' * 10)
-print('    S U P E R   S T O R E   ')
-print('=*=' * 10)
+print('=*=' * 17)
+print(f'{"S U P E R   S T O R E":^52}')
+print('=*=' * 17)
 
 while True:
     nome = input('\nNome do produto: ').strip()
@@ -33,7 +33,7 @@ while True:
         mais_barato = preço
         produto_mais_barato = nome
 
-    print('-' * 30)
+    print('-' * 50)
     opção = input('Deseja continuar? [S/N] ').strip().upper()
 
     if opção not in 'SN':
@@ -42,7 +42,10 @@ while True:
     if opção == 'N':
         break
 
-print(f'\n{" R E L A T Ó R I O ":=^30}')
+print('='*50)
+print(f'{" R E L A T Ó R I O ":=^50}')
+print('='*50)
+
 print(f'\nA) Total da compra R${total:.2f}')
 print(f'B) {mais_de_mil} {"produto custa" if mais_de_mil == 1 else "produtos custam"} mais de R$1000.00')
 print(f'C) O produto mais barato foi {produto_mais_barato} que custou {mais_barato:.2f}')

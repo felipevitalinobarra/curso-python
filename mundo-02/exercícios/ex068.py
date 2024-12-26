@@ -7,7 +7,7 @@ Enunciado do Exercício:
 from random import randint
 
 print('=-='*12)
-print(' 🎮  VAMOS JOGAR PAR OU ÍMPAR   🎲')
+print(f'{"🎮 VAMOS JOGAR PAR OU ÍMPAR 🎲":^32}')
 print('=-='*12)
 
 vitórias = 0
