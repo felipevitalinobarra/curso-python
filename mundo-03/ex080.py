@@ -18,4 +18,4 @@ for número in números:
         pos += 1
     ordenada.insert(pos, número)
 
-print(f'{ordenada}')    
+print(f'Os valores digitados em ordem foram {ordenada}.')    
