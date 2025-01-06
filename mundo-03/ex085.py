@@ -4,11 +4,10 @@ Enunciado do Exercício:
     No final, mostre os valores pares e ímpares em ordem crescente.
 """
 
-números = [[],[]]
+números = [[], []]
 
 for i in range(7):
     valor = int(input(f'Digite o {i+1}° valor: '))
-    
     if valor % 2 == 0:
         números[0].append(valor)
     else:

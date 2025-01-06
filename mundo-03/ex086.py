@@ -9,15 +9,15 @@ Enunciado do Exercício:
 
 matriz = [[], [], []]
 
-for i in range(3):
-    for j in range(3):
+for linha in range(3):
+    for coluna in range(3):
         while True:
             try:
-                num = int(input(f'Digite um valor para [{i},{j}]: '))
+                num = int(input(f'Digite um valor para [{linha},{coluna}]: '))
                 break
             except ValueError:
                 print('Valor inválido! Por favor, digite um número inteiro.')
-        matriz[i].append(num)
+        matriz[linha].append(num)
 
 print('-=-' * 15)
 for linha in matriz:

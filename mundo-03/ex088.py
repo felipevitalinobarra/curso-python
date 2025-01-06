@@ -8,7 +8,7 @@ from random import randint
 from time import sleep
 
 print('-' * 30)
-print(f'{"JOGO NA MEGA SENA":^30}')
+print(f'{" BOLÃO MEGA SENA":^30}')
 print('-' * 30)
 
 while True:

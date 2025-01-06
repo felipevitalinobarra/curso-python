@@ -17,7 +17,7 @@ def deseja_continuar():
 pessoas = []
 
 while True:
-    nome = input('Nome: ')
+    nome = input('Nome: ').strip().title()
     peso = float(input('Peso: '))
     pessoas.append([nome, peso])
 
@@ -34,5 +34,5 @@ leves = [pessoa[0] for pessoa in pessoas if pessoa[1] == leve]
 
 print('-=-' * 30)
 print(f'Foram cadastradas {len(pessoas)} pessoas.')
-print(f'O maior peso foi {pesado:.2f}Kg. Peso de {", ".join(pesados)}.')
-print(f'O menor peso foi {leve:.2f}Kg. Peso de {", ".join(leves)}.')
+print(f'{", ".join(pesados)} {"é o(a) mais pesado" if len(pesados) ==  1 else "são os(as) mais pesados"}, pesando {pesado:.2f}Kg.')
+print(f'{", ".join(leves)} {"é o(a) mais leve" if len(leves) ==  1 else "são os(as) mais leves"}, pesando {leve:.2f}Kg.')
