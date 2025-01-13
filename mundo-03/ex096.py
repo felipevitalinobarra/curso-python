@@ -3,6 +3,7 @@ Enunciado do Exercício:
     Faça um programa que tenha uma função chamada área(), que receba as dimensões de um terreno retangular(largura e comprimento) e mostre a área do terreno.
 """
 
+
 def cabeçalho():
     print('-' * 40)
     print(f'{"Controle de Terrenos":^40}')
@@ -10,7 +11,7 @@ def cabeçalho():
 
 
 def coletar_valores():
-    return [valida_comprimento(), valida_largura()]
+    return [valida_largura(), valida_comprimento()]
 
 
 def valida_largura():
@@ -49,8 +50,9 @@ def main():
         cabeçalho()
         valores = coletar_valores()
         resultado = área(*valores)
-        print(f'\nA área de um terreno {valores[0]}x{valores[1]} é de {resultado}m².')
+        print(f'\nA área de um terreno {valores[0]}x{valores[1]} é de {resultado:.2f}m².')
         if deseja_continuar() == 'N':
+            print('PROGRAMA ENCERRADO')
             break
     
 
