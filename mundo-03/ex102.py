@@ -12,7 +12,7 @@ def fatorial(número, show=False):
         :return: O valor do fatorial de um número.
     """
 
-    print('-' * 30) 
+    print('~' * 10, '\nRESULTADO:')
     fatorial = 1
     
     for c in range(número, 0, -1):
@@ -24,10 +24,18 @@ def fatorial(número, show=False):
             if c > 1:
                 print('x', end=' ')
         print(f'= {fatorial}')                
-            
     else:
         print(f'!{número} = {fatorial}')
 
-    
-fatorial(7, show=True)
-help(fatorial)
+
+def coleta_número():
+    while True:
+        try:
+            print('-' * 40)
+            return int(input('Quer calcular o fatorial de qual número? '))
+        except ValueError:
+            print('\nValor inválido! Por favor, digite um número inteiro.')
+
+
+fatorial(coleta_número(), show=True)
+# help(fatorial)

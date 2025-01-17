@@ -4,20 +4,27 @@ Enunciado do Exercício:
     retornando um valor literal indicando se uma pessoa tem voto NEGADO, OPCIONAL ou OBRIGATÓRIO nas eleições.
 """
 
-from datetime import date
-
 
 def voto(ano_nascimento):
+    from datetime import date
     ano_atual = date.today().year
     idade = ano_atual - ano_nascimento
-    if idade < 18:
-        print(f'Com {idade} anos: VOTO NÃO OBRIGATÓRIO.')
-    elif 18 <= idade < 65:
-        print(f'Com {idade} anos: VOTO OBRIGATÓRIO.')
+    if idade < 16:
+        return f'Com {idade} anos: VOTO NÃO OBRIGATÓRIO.'
+    elif 16 <= idade < 18 or idade > 65:
+        return f'Com {idade} anos: VOTO OPCIONAL.'
     else:
-        print(f'Com {idade} anos: VOTO OPCIONAL.')        
+        return f'Com {idade} anos: VOTO OBRIGATÓRIO.'
 
 
-print('-' * 30)
-ano_nascimento = int(input('Em que ano você nasceu? '))
-voto(ano_nascimento)
+def coleta_ano_nascimento():
+    while True:
+        try:
+            print('-' * 30)
+            ano_nascimento = int(input('Em que ano você nasceu? '))
+            return ano_nascimento
+        except ValueError:
+            print('Ano inválido! Por favor, digite um ano em formato inteiro.')
+
+
+print(voto(coleta_ano_nascimento()))

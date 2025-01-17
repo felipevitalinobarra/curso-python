@@ -7,7 +7,7 @@ Enunciado do Exercício:
 """
 
 
-formatação = {
+cores = {
     'purple' : '\033[1;35m',
     'green' : '\033[1;32m',
     'reset' : '\033[m'
@@ -15,32 +15,35 @@ formatação = {
 
 
 def colorize(text, color):
-    return f'{formatação[color]}{text}{formatação["reset"]}'
+    return f'{cores[color]}{text}{cores["reset"]}'
+
+
+def format_line(message, color='purple'):
+    line = '~' * (len(message) + 4)
+    print(colorize(line, color))
+    print(colorize(f'  {message}  ', color))
+    print(colorize(line, color))
 
 
 def header():
-    print(colorize('~' * 28, 'purple'))
-    print(colorize('  SISTEMA DE AJUDA PyHELP', 'purple'))
-    print(colorize('~' * 28, 'purple'))
+    format_line('SISTEMA DE AJUDA PyHELP')
     
 
-def doc():
+def interactive_help():
     while True:
-        msg = input(f'  Função ou Biblioteca > {formatação["green"]}').strip()
+        msg = input(f'Função ou Biblioteca > {colorize("", "green")}').strip()
         if msg.upper() == 'FIM':
             break
-        linha_msg = len(f'  Acessando o manual do comando "{msg}"') + 2
-        print(colorize('~' * linha_msg, 'purple'))
-        print(colorize(f'  Acessando o manual do comando "{msg}"', 'purple'))
-        print(colorize('~' * linha_msg, 'purple'))
-        print(f'{formatação["green"]}')
+        format_line(f'Acessando o manual do comando "{msg}"')
+        print(cores['green'])
         help(msg)
-        print(f'{formatação["reset"]}')
+        print(cores['reset'])
 
 
 def main():
     header()
-    doc()
+    interactive_help()
+    print(colorize('\nEncerrando o Sistema de Ajuda PyHELP. Até logo!', 'purple'))
 
 
 if __name__ == '__main__':
