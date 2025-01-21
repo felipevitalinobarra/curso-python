@@ -1,4 +1,4 @@
-from .formatação import moeda, format_header
+from .formatação import moeda, format_header, colorize
 from .operações import metade, dobro, aumentar, diminuir
 
 
@@ -6,7 +6,7 @@ def print_line(label: str, value: str, width: int = 25) -> None:
     print(f'{label:<20}{value:>{width}}')
 
 
-def resumo(preço: float, taxa_de_aumento: float, taxa_de_redução: float) -> None:
+def resumo(preço: float, taxa_de_aumento: float, taxa_de_redução: float, color: str='purple') -> None:
     format_header('RESUMO DO VALOR')
     print_line('Preço analisado:', moeda(preço))
     print_line('Dobro do preço:', dobro(preço))
