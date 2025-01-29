@@ -24,6 +24,7 @@ def ler_e_converter() -> list[int]:
 
 
 def main():
+    """Executa o programa principal."""
     números = ler_e_converter()
     if números:
         print(f'Lista ordenada: {ordenar_lista(números)}')
